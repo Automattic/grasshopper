@@ -3,12 +3,16 @@
 	<head>
 		<title>Grasshopper: A WordPress.com REST API + D3.js example</title>
 
+		<!-- Font Awesome and some basic stylesheets -->
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 		<link href="https://wordpress.com/wp-content/mu-plugins/atlas/css/reset.css" rel="stylesheet" type="text/css" />
 		<link href="https://wordpress.com/wp-content/mu-plugins/atlas/css/main.css" rel="stylesheet" type="text/css" />
+
+		<!-- C3 css -->
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css" rel="stylesheet" type="text/css" />
 
-		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<!-- D3 and C3 JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js"></script>
 
 		<style type="text/css">
@@ -63,12 +67,14 @@
 		</style>
 	</head>
 	<body>
+		<!-- This is shown if an access_token wasn't passed in the URL. -->
 		<div class='connect'>
 			<h1><i class="fa fa-line-chart"></i> Grasshopper</h1>
 			<h2><a href="https://developer.wordpress.com/docs/api/">WordPress.com REST API</a> + <a href="http://d3js.org/">D3.js</a> = <i class="fa fa-heart"></i></h2>
 			<a href="https://public-api.wordpress.com/oauth2/authorize?response_type=token&client_id=40443&redirect_uri=https://automattic.github.io/grasshopper/" class="authorize"><img src="//s0.wp.com/i/wpcc-button.png" width="231"></a>
 		</div>
 
+		<!-- The good stuff goes here. -->
 		<div class='container'>
 			<div id="site-info">
 				<div class="loading">Loading site info...</div>
