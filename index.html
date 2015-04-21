@@ -16,9 +16,6 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js"></script>
 
 		<style type="text/css">
-			#siteID {
-				width: 400px;
-			}
 			.container, #site-info #name, #site-info #url, #site-info #switch {
 				display: none;
 			}
@@ -57,11 +54,11 @@
 			#site-info #switch {
 				padding-top: 5px;
 			}
-			#viz {
+			#graph {
 				padding-top: 25px;
 				border: 0 1px 1px 1px;
 			}
-			#viz .tick, #viz .c3-legend-item {
+			#graph .tick, #graph .c3-legend-item {
 				font-size: 14px;
 			}
 		</style>
@@ -87,7 +84,7 @@
 				</div>
 			</div>
 
-			<div id="viz">Loading stats...</div>
+			<div id="graph">Loading stats...</div>
 		</div>
 
 		<script type="text/javascript">
@@ -129,7 +126,7 @@
 				  	dataset.unshift( data["visits"]["fields"] );
 
 					var chart = c3.generate({
-					    bindto: '#viz',
+					    bindto: '#graph',
 					    data: {
 						    x: 'period',
 						    rows: dataset
